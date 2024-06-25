@@ -3,4 +3,16 @@
   text-align: center;
   border: 1px solid white;
   padding: 20px;
+
+  h2 {
+    padding-top: 1em;
+  }
+}
+
+.TeamTileWinner {
+  background-color: green;
+}
+
+.TeamTileLoser {
+  background-color: #d22b2b;
 }

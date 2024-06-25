@@ -13,15 +13,23 @@ function Header() {
         <Link to="/">IPL DashBoard </Link>
       </h1>
       {display && (
-        <div>
-          <h2>
-            <p>
-              A simple project than consumes database information on cricket games, scores and teams.
-              <br />A java driven back end using a Spring Boot to expose data to a React front end.
-              <br />
-            </p>
-          </h2>
-        </div>
+        <>
+          <hr />
+          <div class="overview">
+            <h2>
+              <p>
+                A simple project than consumes database information on cricket games, scores and teams.
+                <br />A java Spring boot built REST API exposing data to a React front end.
+                <br />
+              </p>
+              <p>
+                <br />
+                View each team's win loss history from the league's inception to 2020.
+                <br />
+              </p>
+            </h2>
+          </div>
+        </>
       )}
       <hr />
     </div>
