@@ -8,18 +8,21 @@
   .team-name-section {
     grid-column: span 3;
     justify-self: start;
-    align-self: end;
+    padding-top: 2em;
+    padding-left: 2em;
+    // align-self: center;
   }
 
   .team-name {
     font-size: 4rem;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
   }
 
   .win-loss-section {
     justify-self: center;
-    padding: 30px;
+    padding: 2em;
     text-align: center;
+    max-height: 15em;
   }
 
   .match-detail-section {
@@ -27,8 +30,14 @@
   }
 
   .more-link {
+    color: darkslategray;
+    font-weight: 700;
     align-self: center;
     justify-self: center;
-    font-size: 1rem;
+    font-size: 2rem;
+  }
+
+  .summary-text {
+    color: rgb(36, 60, 60);
   }
 }

@@ -29,21 +29,34 @@ export const TeamPage = () => {
     return <h1>Team not found!</h1>;
   }
 
+  let winPercentage = (team.totalWins / team.totalMatches) * 100;
+  console.log(winPercentage);
   return (
     <div>
       <Header />
       <div className="TeamPage">
         <div className="team-name-section">
           <h1 className="team-name">{team.teamName}</h1>
+          <h3>
+            <span className="summary-text">Total Games Played:</span> {team.totalMatches}
+          </h3>
+          <h3>
+            <span className="summary-text">Total Wins:</span> {team.totalWins}
+          </h3>
+          <h3>
+            <span className="summary-text">Total Losses:</span> {team.totalMatches - team.totalWins}
+          </h3>
         </div>
         <div className="win-loss-section">
-          Wins / Losses
+          <h4>Wins / Losses</h4>
           <PieChart
             data={[
-              { title: "Losses", value: team.totalMatches - team.totalWins, color: "#bf1029" },
+              { title: "Losses", value: team.totalMatches - team.totalWins, color: "#d22b2b" },
               { title: "Wins", value: team.totalWins, color: "#3f8f29" },
             ]}
           />
+          <h4 className="summary-text">Win Percentage:</h4>
+          <h3>{winPercentage.toFixed(2)} %</h3>
         </div>
         <div className="match-detail-section">
           <h3>Latest Matches</h3>
@@ -54,7 +67,7 @@ export const TeamPage = () => {
           <MatchSmallCard key={match.id} teamName={team.teamName} match={match} />
         ))}
 
-        <div className="more-link">
+        <div className="more-link team-name-link">
           <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More {">"}</Link>
         </div>
       </div>
