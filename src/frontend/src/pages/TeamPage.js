@@ -1,6 +1,6 @@
 import "./TeamPage.scss";
 import { React, useEffect, useState } from "react";
-import { useParams, userParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { MatchDetailCard } from "../components/MatchDetailCard";
 import { MatchSmallCard } from "../components/MatchSmallCard";
 import { PieChart } from "react-minimal-pie-chart";
@@ -18,7 +18,7 @@ export const TeamPage = () => {
       // fetchMatches is our asynchronous function
       const response = await fetch(`${process.env.REACT_APP_API_ROOT_URL}/team/${teamName}`); // fetch returns a promise
       const data = await response.json(); // await is used to retrieve information from the fetch promise
-      console.log(data);
+      // console.log(data);
 
       setTeam(data); //setting the returned/fetched data to team by using setTeam
     };
@@ -30,7 +30,7 @@ export const TeamPage = () => {
   }
 
   let winPercentage = (team.totalWins / team.totalMatches) * 100;
-  console.log(winPercentage);
+  // console.log(winPercentage);
   return (
     <div>
       <Header />

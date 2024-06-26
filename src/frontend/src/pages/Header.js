@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 function Header() {
   const location = useLocation();
   const path = location.pathname;
-  const [display, setDisplay] = useState(path == "/" ? true : false);
+  const [display] = useState(path === "/" ? true : false);
 
   return (
     <div className="header-section">

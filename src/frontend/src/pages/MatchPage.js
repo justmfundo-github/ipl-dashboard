@@ -1,7 +1,7 @@
 import "./MatchPage.scss";
 
 import { React, useEffect, useState } from "react";
-import { useParams, userParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { MatchDetailCard } from "../components/MatchDetailCard";
 import { YearSelector } from "../components/YearSelector";
 import Header from "./Header";
@@ -16,7 +16,7 @@ export const MatchPage = () => {
       // fetchMatches is our asynchronous function
       const response = await fetch(`${process.env.REACT_APP_API_ROOT_URL}/team/${teamName}/matches?year=${year}`); // fetch returns a promise
       const data = await response.json(); // await is used to retrieve information from the fetch promise
-      console.log(data);
+      // console.log(data);
 
       setMatches(data); //setting the returned/fetched data to matches by using setMatches
     };

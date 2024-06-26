@@ -14,7 +14,7 @@ export const HomePage = () => {
     const fetchAllTeams = async () => {
       const response = await fetch(`${process.env.REACT_APP_API_ROOT_URL}/teams`);
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
 
       setTeams(data);
     };
