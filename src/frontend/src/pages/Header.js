@@ -15,16 +15,17 @@ function Header() {
       {display && (
         <>
           <hr />
-          <div class="overview">
+          <div className="overview">
             <h2>
               <p>
                 A simple project than consumes database information on cricket games, scores and teams.
-                <br />A java Spring boot built REST API exposing data to a React front end.
+                <br />
+                Built using java Spring boot. Uses REST API to expose data to a React front end.
                 <br />
               </p>
-              <p>
+              <p className="user-instructions">
                 <br />
-                View each team's win loss history from the league's inception to 2020.
+                View each team's win loss history from the year of the league's inception to 2020.
                 <br />
               </p>
             </h2>
