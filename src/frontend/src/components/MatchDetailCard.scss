@@ -1,8 +1,8 @@
 .MatchDetailCard {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 1em;
+  margin-bottom: 5px;
 
   .match-date,
   .match-venue,
@@ -15,5 +15,19 @@
     & > p {
       margin-bottom: 20px;
     }
+
+    h3 {
+      color: darkslategray;
+    }
+  }
+
+  // .summary-text {
+  //   color: darkslategray;
+  // }
+}
+
+.team-name-link {
+  a:hover {
+    color: whitesmoke;
   }
 }
