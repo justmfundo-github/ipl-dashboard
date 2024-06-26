@@ -2,6 +2,7 @@ import "./HomePage.scss";
 import { React, useEffect, useState } from "react";
 import { TeamTile } from "../components/TeamTile";
 import Header from "./Header";
+import Footer from "./Footer";
 
 export const HomePage = () => {
   // declaring a state called team and a function called setTeam to populate that state
@@ -29,6 +30,8 @@ export const HomePage = () => {
           <TeamTile key={team.id} teamName={team.teamName} teamWins={team.totalWins} gamesPlayed={team.totalMatches} />
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 };
